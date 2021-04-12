@@ -27,6 +27,7 @@ let JSX2 = (
 
 
 const sesion = false;
+/* 
 const validS = (
   <>
     <h1>Bienvenido al programa</h1>
@@ -46,8 +47,22 @@ const verificar = (sesion) => {
     return invalidS;
   }
 } //funcion de tipo flecha, retorna codigo jsx
-
-
 ReactDOM.render(verificar(sesion), document.getElementById('root'));
+*/
+
+
+const JSX3 = (
+  <div style={{ textAlign: 'center' }}>
+    {sesion === true ?
+      <>
+        <p style={{ color: 'Blue' }}>Has Iniciado Sesion...</p>
+        <h1 style={{ fontSize: 100 }}>Hola {name}</h1>
+        <p>Bienvenido a Jumbo</p>
+      </>
+      : <p style={{ color: 'red' }}>No has Iniciado Sesion...</p>}
+  </div>
+);
+
+ReactDOM.render(JSX3, document.getElementById('root'));
 
 
