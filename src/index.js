@@ -1,25 +1,67 @@
-import React from 'react';
+//import React from 'react';
+import React, { useState } from 'react'; //agregamos el hooks de stados
 import ReactDOM from 'react-dom';
 import Usuarios from './componentes/Usuarios'; // para importar el componente usuarios
 import { Titulo } from './componentes/Titulo'; //asi podemos importar mas de una componente
+
+
+
+
+
+const App2 = () => {
+  const [sesion, cambiarEstado] = useState(true); //hooks para cambiar el estado de una componente
+
+
+  return (
+    <>
+      {sesion === true ?
+        <>
+          <Usuarios />
+          <button>Cerrar Seccion</button>
+        </>
+        :
+        <>
+          <h1 style={{ fontSize: 50, color: 'red' }}>Nos has iniciado sesion!!</h1>
+          <button>Iniciar Seccion</button>
+        </>
+      }
+    </>
+  );
+};
+
+ReactDOM.render(<App2 />, document.getElementById('root'));
+
+
+
+
+
+
+
+
+
 //import {TituloRed,TituloAzul} from './componentes/Titulo'; //asi podemos importar mas de una componente
 
-const sesion = true;
 //Componente principal
 
 //  <TituloRed Usuarios='Manuel'/>   cunado haces Usuarios='name', Edad='12' estas creando un objeto props donde props.Usuarios es igual a 'name'
 // hay varias formas de usar los props la otra forma es poninedo las propiedades y accediendo a ellas de la siguente forma, {Usuarios}
+
 const App = () => {
+  let sesion11 = true;
+  const cerrarSesion = () => {
+    alert("Estas seguro");
+  }
   return (
     <>
-      {sesion === true ?
+      {sesion11 === true ?
         <>
           <Titulo Usuarios="David" Edad='12' Color="red" />
           <Titulo Usuarios="Maria" Edad='21' Color="blue" />
           <Titulo />
 
           <Usuarios Usuarios="David" Pais='Colombia' />
-          <Usuarios amigos={[12,3,4,1]}/>
+          <Usuarios amigos={[12, 3, 4, 1]} />
+          <button onClick={cerrarSesion}>Cerrar Seccion</button>
         </>
         :
         <h1>Error de sesion</h1>
@@ -27,10 +69,10 @@ const App = () => {
     </>
   );
 };
+//ReactDOM.render(<App />, document.getElementById('root'));
 
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
 /**
 /*

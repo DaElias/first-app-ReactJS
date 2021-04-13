@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Usuarios = ({ Usuarios, pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis'] }) => {
+const Usuarios = ({ Usuarios='Anonimo', pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis'] }) => {
     //const amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis']
     return (
         <div>
@@ -13,6 +13,7 @@ const Usuarios = ({ Usuarios, pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss',
             </ul>
         </div>)
 };
+
 /* 
 const ListaDeAmigos = () => {
     const amigos = ['Juan', 'Maria', 'Pilar', 'Pedro', 'Juan', 'Maria', 'Pilar', 'Pedro', 'Juan', 'Maria', 'Pilar', 'Pedro']
