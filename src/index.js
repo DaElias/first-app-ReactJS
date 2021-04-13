@@ -1,18 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Usuarios from './componentes/Usuarios'; // para importar el componente usuarios
+import { Titulo } from './componentes/Titulo'; //asi podemos importar mas de una componente
+//import {TituloRed,TituloAzul} from './componentes/Titulo'; //asi podemos importar mas de una componente
+
 const sesion = true;
-
-
-
 //Componente principal
 
+//  <TituloRed Usuarios='Manuel'/>   cunado haces Usuarios='name', Edad='12' estas creando un objeto props donde props.Usuarios es igual a 'name'
+// hay varias formas de usar los props la otra forma es poninedo las propiedades y accediendo a ellas de la siguente forma, {Usuarios}
 const App = () => {
   return (
     <>
       {sesion === true ?
         <>
-          <Usuarios />
+          <Titulo Usuarios="David" Edad='12' Color="red" />
+          <Titulo Usuarios="Maria" Edad='21' Color="blue" />
+          <Titulo />
+
+          <Usuarios Usuarios="David" Pais='Colombia' />
+          <Usuarios amigos={[12,3,4,1]}/>
         </>
         :
         <h1>Error de sesion</h1>
