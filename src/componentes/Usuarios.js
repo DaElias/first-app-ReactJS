@@ -1,9 +1,8 @@
 import React from 'react'
-
-const Usuarios = ({ Usuarios='Anonimo', pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis'] }) => {
+const Usuarios = ({ Usuarios = 'Anonimo', pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis'] }) => {
     //const amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis']
     return (
-        <div>
+        <div >
             <h1>Bienvenido {Usuarios}</h1>
             <p>Tu pais es: {pais}</p>
             <p>Saludos a todos!!</p>

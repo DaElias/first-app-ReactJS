@@ -2,7 +2,7 @@
 import React, { useState } from 'react'; //agregamos el hooks de stados
 import ReactDOM from 'react-dom';
 import Usuarios from './componentes/Usuarios'; // para importar el componente usuarios
-import { Titulo } from './componentes/Titulo'; //asi podemos importar mas de una componente
+import { Titulo,Error } from './componentes/Titulo'; //asi podemos importar mas de una componente
 
 
 
@@ -16,13 +16,14 @@ const App2 = () => {
     <>
       {sesion === true ?
         <>
-          <Usuarios />
-          <button>Cerrar Seccion</button>
+          <Titulo Usuarios='David.com' Edad='21' Color='blue' />
+          <Usuarios Usuarios='David' pais='Colombia' />
+          <button className="btn" onClick={() => cambiarEstado(false)} >Cerrar Seccion</button>
         </>
         :
         <>
-          <h1 style={{ fontSize: 50, color: 'red' }}>Nos has iniciado sesion!!</h1>
-          <button>Iniciar Seccion</button>
+          <Error error='No has iniciado secion'/>
+          <button className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
         </>
       }
     </>
@@ -45,7 +46,7 @@ ReactDOM.render(<App2 />, document.getElementById('root'));
 
 //  <TituloRed Usuarios='Manuel'/>   cunado haces Usuarios='name', Edad='12' estas creando un objeto props donde props.Usuarios es igual a 'name'
 // hay varias formas de usar los props la otra forma es poninedo las propiedades y accediendo a ellas de la siguente forma, {Usuarios}
-
+/*
 const App = () => {
   let sesion11 = true;
   const cerrarSesion = () => {
@@ -53,23 +54,24 @@ const App = () => {
   }
   return (
     <>
-      {sesion11 === true ?
-        <>
-          <Titulo Usuarios="David" Edad='12' Color="red" />
-          <Titulo Usuarios="Maria" Edad='21' Color="blue" />
-          <Titulo />
+    {sesion11 === true ?
+      <>
+      <Titulo Usuarios="David" Edad='12' Color="red" />
+      <Titulo Usuarios="Maria" Edad='21' Color="blue" />
+      <Titulo />
 
           <Usuarios Usuarios="David" Pais='Colombia' />
           <Usuarios amigos={[12, 3, 4, 1]} />
           <button onClick={cerrarSesion}>Cerrar Seccion</button>
+          </>
+          :
+          <h1>Error de sesion</h1>
+        }
         </>
-        :
-        <h1>Error de sesion</h1>
-      }
-    </>
-  );
-};
-//ReactDOM.render(<App />, document.getElementById('root'));
+        );
+      };
+      */
+      //ReactDOM.render(<App />, document.getElementById('root'));
 
 
 
