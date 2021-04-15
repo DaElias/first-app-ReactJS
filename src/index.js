@@ -2,14 +2,14 @@
 import React, { useState } from 'react'; //agregamos el hooks de stados
 import ReactDOM from 'react-dom';
 import Usuarios from './componentes/Usuarios'; // para importar el componente usuarios
-import { Titulo,Error } from './componentes/Titulo'; //asi podemos importar mas de una componente
-
+import { Titulo, Error } from './componentes/Titulo'; //asi podemos importar mas de una componente
+import { FormInicio, FormInicioSecion } from './componentes/FormInicio';
 
 
 
 
 const App2 = () => {
-  const [sesion, cambiarEstado] = useState(true); //hooks para cambiar el estado de una componente
+  const [sesion, cambiarEstado] = useState(false); //hooks para cambiar el estado de una componente
 
 
   return (
@@ -22,8 +22,11 @@ const App2 = () => {
         </>
         :
         <>
-          <Error error='No has iniciado secion'/>
+          <Error error='No has iniciado secion' />
+          <FormInicioSecion />
+          {/* 
           <button className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
+          */}
         </>
       }
     </>
