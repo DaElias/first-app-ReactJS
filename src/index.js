@@ -25,8 +25,8 @@ const App2 = () => {
           <Error error='No has iniciado secion' />
           <FormInicioSecion />
           {/* 
-          <button className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
           */}
+          <button className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
         </>
       }
     </>
