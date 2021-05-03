@@ -3,7 +3,7 @@ import React, { useState } from 'react'; //agregamos el hooks de stados
 import ReactDOM from 'react-dom';
 import Usuarios from './componentes/Usuarios'; // para importar el componente usuarios
 import { Titulo, Error } from './componentes/Titulo'; //asi podemos importar mas de una componente
-import { FormInicio, FormInicioSecion } from './componentes/FormInicio';
+import {  FormInicioSecion } from './componentes/FormInicio';
 
 
 
@@ -16,17 +16,17 @@ const App2 = () => {
     <>
       {sesion === true ?
         <>
-          <Titulo Usuarios='David.com' Edad='21' Color='blue' />
+          <Titulo Usuarios='David.com' Edad='21' Color='Red' />
           <Usuarios Usuarios='David' pais='Colombia' />
           <button className="btn" onClick={() => cambiarEstado(false)} >Cerrar Seccion</button>
         </>
         :
         <>
           <Error error='No has iniciado secion' />
-          <FormInicioSecion />
+          <FormInicioSecion cambiarEstado={cambiarEstado} />
           {/* 
+          <button  className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
           */}
-          <button className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
         </>
       }
     </>
@@ -34,7 +34,6 @@ const App2 = () => {
 };
 
 ReactDOM.render(<App2 />, document.getElementById('root'));
-
 
 
 

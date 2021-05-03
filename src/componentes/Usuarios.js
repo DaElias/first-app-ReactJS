@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 const Usuarios = ({ Usuarios = 'Anonimo', pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis'] }) => {
     //const amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis']
     return (

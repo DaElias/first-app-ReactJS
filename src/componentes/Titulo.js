@@ -1,11 +1,11 @@
 import React from 'react'; //imr
 //componentes
 //se le pone Usuario = 'Usuer' haciendo referencia que quede Users si esta propiedade esta vacia
-const Titulo = ({ Usuarios = 'User', Edad = '?', Color = 'black' }) => {
+const Titulo = ({ Usuarios = 'Anonimo', Edad = '?', Color = 'black' }) => {
     return (<>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#" style={{ fontSize: 50 }}>{Usuarios}</a>
+                <a className="navbar-brand" href="#" style={{ fontSize: 50, color: Color }}>{Usuarios}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -40,6 +40,7 @@ const Error = ({ error }) => {
         </>
     );
 };
+
 /* 
 const TituloAzul = ({ Usuarios, Edad }) => {
     return (
