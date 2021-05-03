@@ -6,14 +6,14 @@ import { Titulo, Error } from './componentes/Titulo'; //asi podemos importar mas
 import { FormInicioSecion } from './componentes/FormInicio';
 import ContadorClass from './componentes/ContadorClass';
 import ContadorComponentes from './componentes/ContadorComponentes';
-
+//import './componentes/index.css'; //importar css
 
 const App2 = () => {
-  const [sesion, cambiarEstado] = useState(true); //hooks para cambiar el estado de una componente
+  const [sesion, cambiarEstado] = useState(false); //hooks para cambiar el estado de una componente
 
 
   return (
-    <>
+    <div className="container" >
       {sesion === true ?
         <>
           <Titulo Usuarios='David.com' Edad='21' Color='Red' />
@@ -22,6 +22,8 @@ const App2 = () => {
           <ContadorClass incrementarDisminuir={1} />
           <hr></hr>
           <ContadorComponentes incrementarDisminuir={1} />
+          {/* 
+          */}
 
         </>
         :
@@ -33,7 +35,7 @@ const App2 = () => {
           */}
         </>
       }
-    </>
+    </div>
   );
 };
 

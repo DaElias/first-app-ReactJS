@@ -12,16 +12,16 @@ const FormInicioSecion = (props) => {
 
     */
     const onechange = (e) => {
-        if (e.target.name == "usuario") {
+        if (e.target.name === "usuario") {
             CambiaUsuario(e.target.value);
-        } else if (e.target.name == "password") {
+        } else if (e.target.name === "password") {
             CambiarPass(e.target.value);
         }
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if (usuario == "david" && password == "123") {
+        if (usuario === "david" && password === "123") {
             // alert('Datos correctos');
             props.cambiarEstado(true);
         } else {

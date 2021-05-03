@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,Component } from 'react';
 
 
 
@@ -11,6 +11,9 @@ const ContadorComponentes = (props) => {
     const Disminuir = (n) => {
         incrementarDisminuir(contador - n);
     }
+
+    
+
     return (
         <>
             <h3>-Contador por componentes</h3>
