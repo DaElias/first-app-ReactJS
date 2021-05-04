@@ -13,7 +13,7 @@ const Boton = styled.button`
     transition: .3s ease all;
     border-radius: 3px;
     margin-right: 10px;
-    width:${props => props.LARGO ? '100%':'auto' };
+    width:${props => props.LARGO ? '100%' : 'auto'};
     &:hover{
     background: #44a559;
     color: #fff;
@@ -24,6 +24,7 @@ const Boton = styled.button`
 ${props => props.NEGRO && css`
 background-color:grey;
 color:white;
+margin:10px;
 &:hover{
     background-color:red;
 }
@@ -32,5 +33,7 @@ color:white;
 ${props => props.marginTop && css` margin:50px 10px ;`}
 
 `;
+
+
 
 export default Boton;

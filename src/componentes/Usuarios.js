@@ -22,6 +22,11 @@ const Titulo = styled.h1`
     margin: 10px 100px;
     color:red;
     text-shadow:10px 10px 10px  black;
+    transition:1s;
+    &:hover{
+        color:green;
+        font-size:50px;
+    }
 `;
 
 

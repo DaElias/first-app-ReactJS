@@ -10,7 +10,7 @@ import ContadorComponentes from './componentes/ContadorComponentes';
 import styles from './componentes/index.module.css';
 import Boton from '../src/componentes/elementos/Boton';
 import EjemploUseReducer from './componentes/EjemploUseReducer';
-
+import Blog from './componentes/Blog';
 
 const App2 = () => {
   const [sesion, cambiarEstado] = useState(false); //hooks para cambiar el estado de una componente
@@ -22,24 +22,16 @@ const App2 = () => {
         <>
           <Titulo Usuarios='David.com' Edad='21' Color='Red' />
           <Usuarios Usuarios='David' pais='Colombia' />
+          <Blog></Blog>
           <EjemploUseReducer></EjemploUseReducer>
-          <Boton NEGRO LARGO onClick={() => cambiarEstado(false)}> Cerrar Seccion</Boton>
-          {/* 
-          <ContadorClass incrementarDisminuir={1} />
-          */}
           <hr></hr>
           <ContadorComponentes incrementarDisminuir={1} />
-          {/* 
-          */}
-
+          <Boton NEGRO LARGO onClick={() => cambiarEstado(false)}> Cerrar Seccion</Boton>
         </>
         :
         <>
           <Error error='No has iniciado secion' />
           <FormInicioSecion cambiarEstado={cambiarEstado} />
-          {/* 
-          <button  className='btn' onClick={() => cambiarEstado(true)}>Iniciar Seccion</button>
-          */}
         </>
       }
     </div>
