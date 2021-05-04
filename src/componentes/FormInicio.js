@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-
+import Boton from './elementos/Boton';
 
 const FormInicioSecion = (props) => {
     const [usuario, CambiaUsuario] = useState('');
@@ -80,7 +80,10 @@ const FormInicioSecion = (props) => {
                     </div>
                 </div>
                 <br></br>
-                <button className='btn' type='submit' >Iniciar Sesion</button>
+                <Boton NEGRO LARGO type='submit'>Inicio de secion</Boton>
+                {/* 
+                    <button className='btn' type='submit' >Iniciar Sesion</button>
+                */}
             </form>
         </>
     );

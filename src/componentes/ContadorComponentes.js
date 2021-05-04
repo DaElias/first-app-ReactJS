@@ -1,6 +1,5 @@
-import React, { useState,Component } from 'react';
-
-
+import React, { useState, Component } from 'react';
+import Boton from './elementos/Boton';
 
 const ContadorComponentes = (props) => {
     const [contador, incrementarDisminuir] = useState(0);
@@ -12,14 +11,14 @@ const ContadorComponentes = (props) => {
         incrementarDisminuir(contador - n);
     }
 
-    
+
 
     return (
         <>
             <h3>-Contador por componentes</h3>
             <h1>Contador: {contador}</h1>
-            <button className="btn" onClick={() => { Incrementar(props.incrementarDisminuir) }}>Incgrementar</button>
-            <button className="btn" onClick={() => { Disminuir(props.incrementarDisminuir) }}>Disminuir</button>
+            <Boton marginTop onClick={() => { Incrementar(props.incrementarDisminuir) }}>Incrementar</Boton>
+            <Boton onClick={() => { Disminuir(props.incrementarDisminuir) }}>Disminuir</Boton>
         </>
     )
 }
