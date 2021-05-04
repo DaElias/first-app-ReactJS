@@ -9,6 +9,8 @@ import ContadorComponentes from './componentes/ContadorComponentes';
 //import './componentes/index.css'; //importar css
 import styles from './componentes/index.module.css';
 import Boton from '../src/componentes/elementos/Boton';
+import EjemploUseReducer from './componentes/EjemploUseReducer';
+
 
 const App2 = () => {
   const [sesion, cambiarEstado] = useState(false); //hooks para cambiar el estado de una componente
@@ -20,9 +22,7 @@ const App2 = () => {
         <>
           <Titulo Usuarios='David.com' Edad='21' Color='Red' />
           <Usuarios Usuarios='David' pais='Colombia' />
-          {/*
-          <button className="btn" onClick={() => cambiarEstado(false)} >Cerrar Seccion</button>
-           */}
+          <EjemploUseReducer></EjemploUseReducer>
           <Boton NEGRO LARGO onClick={() => cambiarEstado(false)}> Cerrar Seccion</Boton>
           {/* 
           <ContadorClass incrementarDisminuir={1} />

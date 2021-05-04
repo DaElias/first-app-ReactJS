@@ -1,4 +1,4 @@
-import React, { useState, Component, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Boton from './elementos/Boton';
 
 const ContadorComponentes = (props) => {

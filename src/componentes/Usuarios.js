@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 // para instalar el styled-components es asi --> npm install --save styled-components
-import styles from 'styled-components';
+//import styles from 'styled-components';
 
 const Usuarios = ({ Usuarios = 'Anonimo', pais, amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis'] }) => {
     //const amigos = ['Juan', 'Pedro', 'Lucas', 'Criss', 'Juan', 'Pedro', 'Lucas', 'Criss', 'Luis']
