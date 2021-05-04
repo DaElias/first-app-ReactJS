@@ -4,22 +4,25 @@ import ReactDOM from 'react-dom';
 import Usuarios from './componentes/Usuarios'; // para importar el componente usuarios
 import { Titulo, Error } from './componentes/Titulo'; //asi podemos importar mas de una componente
 import { FormInicioSecion } from './componentes/FormInicio';
-import ContadorClass from './componentes/ContadorClass';
+//import ContadorClass from './componentes/ContadorClass';
 import ContadorComponentes from './componentes/ContadorComponentes';
 //import './componentes/index.css'; //importar css
+import styles from './componentes/index.module.css';
 
 const App2 = () => {
   const [sesion, cambiarEstado] = useState(false); //hooks para cambiar el estado de una componente
 
 
   return (
-    <div className="container" >
+    <div className={styles.container} >
       {sesion === true ?
         <>
           <Titulo Usuarios='David.com' Edad='21' Color='Red' />
           <Usuarios Usuarios='David' pais='Colombia' />
           <button className="btn" onClick={() => cambiarEstado(false)} >Cerrar Seccion</button>
+          {/* 
           <ContadorClass incrementarDisminuir={1} />
+          */}
           <hr></hr>
           <ContadorComponentes incrementarDisminuir={1} />
           {/* 
